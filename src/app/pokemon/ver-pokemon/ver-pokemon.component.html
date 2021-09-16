@@ -1,0 +1,44 @@
+<div *ngIf="pokemon" class="color-layout title">
+  <h1>Información de: {{ pokemon.name | titlecase }}</h1>
+</div>
+<div *ngIf="hasError" class="alert alert-danger errorMessage">
+  No se encontro el pokemon `{{ search | titlecase}}`
+</div>
+
+<div *ngIf="pokemon">
+  <div class="pokemon color-layout">
+    <div class="info-general">
+      <img [src]="imagen()">
+      <h5>Name:
+        <pre>{{ pokemon.name | titlecase }}</pre>
+      </h5>
+      <h5>Experiencia:
+        <pre>{{ pokemon.base_experience }} XP</pre>
+      </h5>
+      <h5>Peso:
+        <pre>{{ (pokemon.weight / 10).toFixed(1)}} KG</pre>
+      </h5>
+      <h5>ID:
+        <pre>{{ pokemon.id }}</pre>
+      </h5>
+    </div>
+    <div class="info-descriptions">
+      <h2>Mas información</h2>
+      <hr>
+      <h5 class="title-type">Tipo:</h5>
+      <div class="types">
+        <p [class]="tipo.type.name" *ngFor="let tipo of pokemon.types"
+          [routerLink]="['/home/por-tipo/',tipo.type.name]">
+          {{ tipo.type.name | titlecase }}
+        </p>
+      </div>
+      <h5 class="title-stats">Stats:</h5>
+      <div style="display: block">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+          [legend]="barChartLegend" [chartType]="barChartType" [colors]="barChartColors">
+        </canvas>
+      </div>
+      <button class="btn btn-primary boton-back" routerLink="home/listado">Volver al listado</button>
+    </div>
+  </div>
+</div>

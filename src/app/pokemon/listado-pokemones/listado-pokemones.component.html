@@ -1,0 +1,43 @@
+<div class="title color-layout">
+  <h2>Listado</h2>
+</div>
+
+
+<!-- Buscador -->
+
+<div class="search animate__animated animate__fadeIn" *ngIf="isFull">
+  <form>
+    <label for="nombre">Buscar pokemon:</label>
+    <input placeholder="Pikachu..."
+           (input)="buscar()"
+           [(ngModel)]="termino"
+           name="termino">
+  </form>
+</div>
+
+
+<!-- *ngIf="arrayPokemones.length === 0"--> 
+<div class="alert-wait animate__animated animate__fadeIn" *ngIf="!isFull"
+> 
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>! Información ¡</strong> Por favor espere, estamos cargando la información.        
+      </div>
+</div>
+
+
+<div *ngIf="isFull"
+     class="color-layout pokemons-hub animate__animated animate__fadeIn">
+    <div *ngFor="let pokemon of pokemones"
+         class="card-pokemon"
+         [routerLink]="['/home/ver-pokemon', pokemon.name]">
+      <img [src]="cargarImagen(pokemon)" alt="No cargo"
+           loading="lazy">      
+      <h4>{{ pokemon.name | titlecase }}</h4>
+      <div class="specie">
+        <p *ngFor="let type of pokemon.types "
+           [class]="type.type.name">
+          {{ type.type.name | titlecase }}
+        </p>
+      </div>
+    </div>
+</div>

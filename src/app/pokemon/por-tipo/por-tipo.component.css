@@ -1,0 +1,75 @@
+.title-type {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container-types {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    width: 90%;
+    margin: 0px auto;
+    justify-content: space-around;
+    margin-top: 55px;
+}
+.parrafo-item img {
+    display: block;
+    width: 150px;
+    margin: 0px auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: all 300ms;
+}
+
+.parrafo-item {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.parrafo-item:hover {
+    border: 2px solid #FFCC01;
+    box-shadow: 0px 0px 30px #3363AF;
+    transform: scale(1.1,1.1);
+}
+.parrafo-item p {
+    text-align: center;
+    font-size: 25px;
+    transition: all 300ms;
+    font-family: 'font-pokemonApp-bold';
+}
+.parrafo-item:hover p {
+    margin-top: -110px;
+}
+
+.parrafo-item:hover img {
+    opacity: 0.2;
+}
+
+@media( max-width:1080px ) {
+
+    .parrafo-item img {
+        opacity: 0.2;
+    }
+
+    .parrafo-item p {
+        margin-top: -110px;
+    }
+    .parrafo-item {
+        box-shadow: 0px 0px 30px #3363AF, 0px 0px 4px #FFCC01;        
+    }
+}
+
+@media(max-width: 482px) {
+    h4 {
+        width: 90%;
+        margin: 0px auto;
+    }
+}

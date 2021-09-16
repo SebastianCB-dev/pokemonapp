@@ -1,0 +1,17 @@
+<div class="menu-header">
+    <div class="color-layout title-main col">
+        <img src="../assets/img/logo.png">
+    </div>
+    <div class="col menu-items">
+        <nav class="menu">
+            <ul>
+                <li *ngFor="let item of menu"
+                    [routerLink]="item.ruta"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    {{ item.nombre  }}
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

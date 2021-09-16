@@ -1,0 +1,14 @@
+<div class="color-layout">
+  <h4 class="title-type">Escoge el tipo de pokemon que desea buscar: </h4>
+</div>
+
+<div class="color-layout container-types">
+  <div class="parrafo-item"
+       *ngFor="let tipo of tipos"
+       [routerLink]="['/home/por-tipo', tipo.name]">
+    <img [src]="imagen(tipo.name)">
+    <p >
+        {{ tipo.name | titlecase }}
+    </p>
+  </div>
+</div>

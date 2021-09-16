@@ -1,0 +1,253 @@
+
+.title h2{
+    font-family: 'font-pokemonApp-bold';
+    border-bottom: 2px solid #ccc;
+    width: 140px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+
+.search {
+    width: 600px;
+    margin: 0px auto;
+    margin-top: 40px;
+}
+
+.search input {
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    border: transparent;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: 2px solid rgb(219, 218, 218);
+    transition: all 300ms;
+    background-color: rgb(219, 218, 218);
+}
+
+.search input:focus {
+    border: 2px solid #FFCC01;
+    box-shadow: 0px 0px 30px #3363AF;
+}
+.search label {
+    color: #ccc;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.alert-wait {
+    width: 700px;
+    margin: 0px auto;
+    text-align: center;
+    letter-spacing: -0.8px;
+    word-spacing: -1.5px;
+    margin-top: 20px;
+}
+
+.alert-wait strong {
+    margin-right: 10px;
+}
+
+.pokemons-hub {
+    width: 85%;
+    margin: 0px auto;
+    height: auto;
+    max-height: 700px;    
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    padding-top: 30px;
+}
+
+.pokemons-hub::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+}
+
+.pokemons-hub::-webkit-scrollbar-thumb {
+    background-color: #3363AF;
+
+    width: 7px;
+    border-radius: 20px;
+}
+.pokemons-hub .card-pokemon {
+    width: 310px;
+    height: 310px;
+    border: 3px solid #ccc;
+    border-radius: 12px;  
+    margin-left: 15px;
+    margin-right: 15px;  
+    transition: all 300ms;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.pokemons-hub .card-pokemon:hover {
+    margin-top: -10px;
+    border: 3px solid #FFCC01;
+    box-shadow: 0px 0px 30px #3363AF;
+}
+
+.pokemons-hub .card-pokemon img{
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 0px auto;
+    margin-top: 25px;
+}
+
+.pokemons-hub .card-pokemon h4 {
+    text-align: center;
+    letter-spacing: -1px;
+    margin-top: 10px;
+}
+
+.pokemons-hub .card-pokemon .specie {
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    margin: 0px auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.pokemons-hub .card-pokemon .specie p {
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.pokemons-hub .card-pokemon .specie .grass {
+    background-color: #9BCC50;
+    color: black;
+}
+
+.pokemons-hub .card-pokemon .specie .poison {
+    background-color: #B97FC9;
+    color: #fff;
+}
+
+.pokemons-hub .card-pokemon .specie .fire {
+    background-color: #FE7E25;
+    color: #fff;
+}
+
+.pokemons-hub .card-pokemon .specie .water {
+    background-color: #4592C4;
+    color: #fff;
+}
+
+
+.pokemons-hub .card-pokemon .specie .bug {
+    background-color: #729F3F;
+    color: #fff;
+}
+
+
+.pokemons-hub .card-pokemon .specie .flying {
+    background-color: #BDB9B8;
+    color: #fff;
+}
+
+.pokemons-hub .card-pokemon .specie .normal {
+    background-color: #626262;
+    color: #fff;
+}
+
+
+.pokemons-hub .card-pokemon .specie .electric {
+    background-color: #EED535;
+    color: #000;
+}
+
+.pokemons-hub .card-pokemon .specie .rock {
+    background-color: #A38C21;
+    color: #fff;
+}
+
+.pokemons-hub .card-pokemon .specie .psychic {
+    background-color: #F366B9;
+    color: #fff;
+}
+
+.pokemons-hub .card-pokemon .specie .fighting {
+    background-color: #D56723;
+    color: #fff;
+}
+.pokemons-hub .card-pokemon .specie .fairy {
+    background-color: #FEBAEA;
+    color: #000;
+}
+
+.pokemons-hub .card-pokemon .specie .steel {
+    background-color: #9EB7B8;
+    color: #000;
+}
+
+
+.pokemons-hub .card-pokemon .specie .ice {
+    background-color: #51C4E7;
+    color: #000;
+}
+
+.pokemons-hub .card-pokemon .specie .ghost {
+    background-color: #7B62A3;
+    color: #fff;
+}
+
+.pokemons-hub .card-pokemon .specie .ground {
+    background-color: #AB9842;
+    color: #fff;
+}
+
+.pokemons-hub .card-pokemon .specie .dragon {
+    background-color: #F16E57;
+    color: #fff;
+}
+
+.pokemons-hub .card-pokemon .specie .dark {
+    background-color: #707070; 
+    color: #fff;
+}
+
+@media(max-width: 734px) {
+    .alert-wait {
+        width: 90%;
+        margin: 0px auto;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 660px) {
+    .search label {
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .search input {
+        display: block;
+        width: 90%;
+        margin: 0px auto;
+    }
+    .search {
+        width: 90%;
+        margin: 0px auto;
+    }
+}
+
+
+@media(max-width: 430px ) {
+    .pokemons-hub .card-pokemon {
+        height: auto;
+    }
+}

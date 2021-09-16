@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'font-pokemonApp';
+    src: url(./assets/font/Nunito-Regular.ttf);
+}
+@font-face {
+    font-family: 'font-pokemonApp-bold';
+    src: url(./assets/font/Nunito-Bold.ttf);
+}
+
+
+
+body {
+    background-color: #1E1E1E;
+    font-family: 'font-pokemonApp';
+}
+
+
+.color-layout {
+    color: #fff;
+}
+
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #FFCC01;
+    width: 10px;
+    border-radius: 20px;
+}
